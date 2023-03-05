@@ -1,0 +1,1 @@
+const String privacyPolicyLink = "https://docs.boxch.net/get-started/privacy-policy";
