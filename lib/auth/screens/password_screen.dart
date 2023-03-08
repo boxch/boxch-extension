@@ -15,7 +15,7 @@ class PasswordScreen extends StatelessWidget {
     return BlocBuilder<AuthCubit, AuthStates>(
       builder: (context, state) {
         if (state is InputPasswordState) {
-          return EnterPasswordScreen();
+          return EnterPasswordScreen(error: state.error);
         }
 
         if (state is CreatePasswordState) {
@@ -26,10 +26,6 @@ class PasswordScreen extends StatelessWidget {
           return BlocProvider<MainCubit>(
             create: (context) => MainCubit(),
             child: const MainScreen());
-        }
-
-        if (state is InvalidPasswordState) {
-          
         }
 
         return Container();

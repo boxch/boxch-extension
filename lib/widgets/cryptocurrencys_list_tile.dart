@@ -5,7 +5,7 @@ class CryptocurrencysListTile extends StatelessWidget {
   final String? image;
   final String title;
   final String subtitle;
-  final onPressed;
+  final Function() onPressed;
 
   const CryptocurrencysListTile(
       {super.key, required this.image,

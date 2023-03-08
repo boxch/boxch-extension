@@ -6,7 +6,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 class AuthCubit extends Cubit<AuthStates> {
   AuthCubit({initialState}) : super(Hive.box(boxPassword).isNotEmpty
-            ? InputPasswordState()
+            ? InputPasswordState(error: false)
             : CreatePasswordState(message: "Enter a new password"));
 
   String _passwordOne = '';
@@ -20,18 +20,18 @@ class AuthCubit extends Cubit<AuthStates> {
         await Hive.box(boxPassword).put(boxPasswordKey, password);
         emit(ValidPasswordState());
       } else {
-        emit(InvalidPasswordState());
+        emit(InputPasswordState(error: true));
       }
     }
   }
 
   Future<void> checkPassword({required String password}) async {
-    await Hive.box(boxPassword).get(boxPasswordKey) == password ? emit(ValidPasswordState()) : emit(InvalidPasswordState());
+    await Hive.box(boxPassword).get(boxPasswordKey) == password ? emit(ValidPasswordState()) : emit(InputPasswordState(error: true));
   }
 
   Future<void> resetPassword({required String privateKey}) async {
     final UserWallet currentWalletPrivateKey = await Hive.box(boxWallets).get(boxCurrentWallet);
-    currentWalletPrivateKey.privateKey == privateKey ? emit(CreatePasswordState()) : emit(InvalidPasswordState());
+    currentWalletPrivateKey.privateKey == privateKey ? emit(CreatePasswordState()) : emit(InputPasswordState(error: true));
   }
   
 }

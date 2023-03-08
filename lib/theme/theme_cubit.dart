@@ -1,5 +1,6 @@
 import 'package:boxch_extension/utils/constants.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+// ignore: depend_on_referenced_packages
 import 'package:hive/hive.dart';
 
 import 'theme_states.dart';

@@ -1,7 +1,6 @@
 import 'package:boxch_extension/start/cubit/start_cubit.dart';
 import 'package:boxch_extension/widgets/create_restore_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class RestoreWalletScreen extends StatelessWidget {

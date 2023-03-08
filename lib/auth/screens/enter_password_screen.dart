@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class EnterPasswordScreen extends StatelessWidget {
-  EnterPasswordScreen({ Key? key, }) : super(key: key);
+  final bool error;
+  EnterPasswordScreen({ Key? key, required this.error}) : super(key: key);
 
   final TextEditingController _controllerPassword = TextEditingController();
 
@@ -54,7 +55,9 @@ class EnterPasswordScreen extends StatelessWidget {
                                           fontSize: 16.0,
                                           color: Colors.grey,
                                           fontWeight: FontWeight.w100),
-                                      filled: true,
+                                          filled: true,
+                                          errorText: error ? "" : null,
+                                          errorStyle: const TextStyle(fontSize: 0.01),
                                           errorBorder: OutlineInputBorder(
                                             borderRadius: BorderRadius.circular(10),
                                             borderSide: const BorderSide(

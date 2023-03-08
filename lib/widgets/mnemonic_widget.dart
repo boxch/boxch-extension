@@ -5,10 +5,10 @@ class MnemonicWidget extends StatefulWidget {
   const MnemonicWidget({ Key? key, required this.mnemonic }) : super(key: key);
 
   @override
-  _MnemonicWidgetState createState() => _MnemonicWidgetState();
+  MnemonicWidgetState createState() => MnemonicWidgetState();
 }
 
-class _MnemonicWidgetState extends State<MnemonicWidget> {
+class MnemonicWidgetState extends State<MnemonicWidget> {
 
 
  List<String> getWidgetFromMnemonicList() {
@@ -27,7 +27,7 @@ class _MnemonicWidgetState extends State<MnemonicWidget> {
     return Padding(
             padding: const EdgeInsets.all(16.0),
                     child: Container(
-                      padding: EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(16.0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         border: Border.all(
@@ -72,7 +72,7 @@ class _MnemonicWidgetState extends State<MnemonicWidget> {
                               ),
                             ],
                           ),
-                          SizedBox(height: 16.0),
+                          const SizedBox(height: 16.0),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -108,7 +108,7 @@ class _MnemonicWidgetState extends State<MnemonicWidget> {
                               ),
                             ],
                           ),
-                          SizedBox(height: 16.0),
+                          const SizedBox(height: 16.0),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -144,7 +144,7 @@ class _MnemonicWidgetState extends State<MnemonicWidget> {
                               ),
                             ],
                           ),
-                          SizedBox(height: 16.0),
+                          const SizedBox(height: 16.0),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [

@@ -8,6 +8,6 @@ const String boxWallets = "boxWallets";
 const String boxWalletsKey = "boxWalletsKey";
 const String boxCurrentWallet = "boxCurrentKey";
 
-const String WSOL = "So11111111111111111111111111111111111111112";
-const String SOL = "11111111111111111111111111111111";
+const String wsol = "So11111111111111111111111111111111111111112";
+const String sol = "11111111111111111111111111111111";
 

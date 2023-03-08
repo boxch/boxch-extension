@@ -54,7 +54,7 @@ class CreateWalletScreen extends StatelessWidget {
                     ),),
                     const SizedBox(height: 16.0),
                     Padding(
-                      padding: EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(16.0),
                       child: SizedBox(
                         child: TextFormField(
                           controller: _controller,

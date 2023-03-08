@@ -1,7 +1,5 @@
 import 'package:boxch_extension/auth/cubit/auth_cubit.dart';
 import 'package:boxch_extension/auth/screens/password_screen.dart';
-import 'package:boxch_extension/main/cubit/main_cubit.dart';
-import 'package:boxch_extension/main/screens/main_screen.dart';
 import 'package:boxch_extension/start/screens/create_wallet_screen.dart';
 import 'package:boxch_extension/start/screens/restore_wallet_screen.dart';
 import 'package:boxch_extension/start/screens/start_screen.dart';

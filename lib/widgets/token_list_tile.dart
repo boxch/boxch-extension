@@ -7,18 +7,17 @@ class TokenListTile extends StatelessWidget {
   final String subtitle;
   final String trailingTitle;
   final String trailingSubtitle;
-  final onPressed;
+  final Function() onPressed;
   final Color backgroundColor;
 
   const TokenListTile(
-      {required this.image,
+      {super.key, required this.image,
       required this.title,
       required this.subtitle,
       required this.trailingTitle,
       required this.trailingSubtitle,
       required this.onPressed,
-      required this.backgroundColor})
-      : super();
+      required this.backgroundColor});
 
 
     Widget getImageIcon({required String? image}) {
@@ -34,7 +33,7 @@ class TokenListTile extends StatelessWidget {
                       fit: BoxFit.fill,
           );
        } 
-       return Container(height: 30.0, width: 30.0, alignment: Alignment.center, child: Text("?"));
+       return Container(height: 30.0, width: 30.0, alignment: Alignment.center, child: const Text("?"));
       }
 
   @override
@@ -47,7 +46,7 @@ class TokenListTile extends StatelessWidget {
             Theme.of(context).scaffoldBackgroundColor),
         onTap: onPressed,
         child: Padding(
-            padding: EdgeInsets.only(left: 13.0, right: 16.0, bottom: 10.0, top: 10.0),
+            padding: const EdgeInsets.only(left: 13.0, right: 16.0, bottom: 10.0, top: 10.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -55,7 +54,7 @@ class TokenListTile extends StatelessWidget {
                       child: Row(
                         children: [
                           Container(
-                            padding: EdgeInsets.symmetric(horizontal: 6.0, vertical: 6.0),
+                            padding: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 6.0),
                             decoration: BoxDecoration(
                               color: Theme.of(context).colorScheme.background,
                               borderRadius: BorderRadius.circular(30.0),
@@ -65,11 +64,11 @@ class TokenListTile extends StatelessWidget {
                             child: getImageIcon(image: image),
                           ),
                           ),
-                          SizedBox(width: 5.0),
+                          const SizedBox(width: 5.0),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(title, style: TextStyle(fontSize: 15.0)),
+                              Text(title, style: const TextStyle(fontSize: 15.0)),
                               Text(subtitle,
                                   style: TextStyle(
                                       fontSize: 13.0,
@@ -82,9 +81,9 @@ class TokenListTile extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Text(trailingTitle, style: TextStyle(fontSize: 16.0)),
+                    Text(trailingTitle, style: const TextStyle(fontSize: 16.0)),
                     Text(trailingSubtitle,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 10.0,
                             )),
                   ],

@@ -35,6 +35,7 @@ class StartScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Image.asset("assets/images/logo512.png", height: 100.0, width: 100.0),
+                // ignore: prefer_const_constructors
                 SizedBox(),
               ],
             ),

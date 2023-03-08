@@ -1,4 +1,5 @@
 import 'package:boxch_extension/utils/constants.dart';
+// ignore: depend_on_referenced_packages
 import 'package:hive/hive.dart';
 import 'package:solana/solana.dart';
 
